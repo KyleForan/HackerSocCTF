@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+char* flag1 = "G}\n";
 char* flag2 = "EHS{FAK";
 char* flag3 = "E_FLA";
-char* flag1 = "G}\n";
 char total[32];
 
 int main(void) {
