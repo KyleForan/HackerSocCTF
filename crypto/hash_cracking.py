@@ -1,12 +1,10 @@
 import hashlib
 import secrets
-from pwn import xor # temp
 
 wordlist = open("wordlist.txt").read().splitlines()
-
-FLAG = b"EHS{FAKE_FLAG}"
 
 word = secrets.choice(wordlist)
 hashed = hashlib.md5(word.encode()).hexdigest()
 
-
+print(f"Hashed: {hashed}")
+# Hashed: adff44c5102fca279fce7559abf66fee
