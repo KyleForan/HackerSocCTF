@@ -4,7 +4,7 @@
 
 int win(void) {
     puts("Congrats!!");
-    puts("EHS{flag}");
+    system("cat ./flag3");
 }
 
 int vuln(void) {

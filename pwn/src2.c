@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main(void) {
-    int token = 5;
+    int token = 0xdeadbeef;
     char password[16];
 
     printf("Welcome Admin.\n");
@@ -17,7 +17,7 @@ int main(void) {
     printf("Token: %x\n", token);
 
     if (token == 0xf33df00d) {
-        printf("EHS{flag}");
+        system("cat ./flag2");
     }
 
 }

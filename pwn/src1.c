@@ -17,7 +17,7 @@ int main(void) {
     printf("Token: %x\n", token);
 
     if (token != 5) {
-        printf("EHS{flag}");
+        system("cat ./flag1");
     }
 
 }
