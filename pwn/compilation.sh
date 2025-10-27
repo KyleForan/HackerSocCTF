@@ -1,6 +1,6 @@
 # Janky setup but it works
 # gcc <input.c> -o <output> -no-pie -m32 -w;
-for file in ./*;
+for file in ./*/*;
 do
     if [[ "$file" == *.c ]] then
         echo $file;
