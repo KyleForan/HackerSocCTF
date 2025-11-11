@@ -10,7 +10,7 @@ int vuln(void) {
     char unsafebuffer[16];
 
     fflush(stdout);
-    puts("Now can you return to win... with arguments 64x?");
+    puts("There is no win function, how will you get the shell now?");
     
     printf("Input: "); 
     fgets(unsafebuffer, 200, stdin);

