@@ -1,0 +1,7 @@
+For this challenge there are 2 options
+
+Solve 1 - Python:
+Change the script to loop through the wordlist and check if the result is equal to the provided hash
+
+Solve 2 - Hash Cracker:
+There are tools to crack hashes efficiently (eg. John the Ripper)

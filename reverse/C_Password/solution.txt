@@ -1,0 +1,33 @@
+There are 3 ways to solve this challenge:
+
+1. Strings
+"strings" is a command to view sequences of printable characters.
+Here we can use it to find the 3 parts of the flag.
+strings cpass_32
+
+2. Disassembly
+Using a disassembler such as ghidra or dogbolts we can see the source code of the program.
+Looking through 3 flag part variables can be found.
+https://dogbolt.org/ or sudo apt install ghidra
+
+3. GDB
+The most complicated way is to live debug the program, 
+this means to extract the flag from memory when the program is running,
+While over the top for this challenge it is useful to learn for other challenges.
+
+First we look through the functions to find where the password is loaded into memory,
+In this program it is the strcmp function call.
+
+Running the program through GDB, we can break at the strcmp call instruction, 
+Then we run the program and when it hits the breakpoint we can view the arguments passed in
+one of which will be the flag
+
+gdb cpass_32/cpass_64
+disass main
+b* <address of strcmp call>
+r
+<enter anything>
+# For 32 bit
+telescope
+# For 64 bit
+x/s $rdi

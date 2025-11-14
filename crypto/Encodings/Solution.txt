@@ -1,0 +1,6 @@
+Using https://gchq.github.io/CyberChef/
+Try different combinations of the listed formats until you get a Flag
+Every Encoding is only used once
+
+Solution:
+From Base64 -> From Octal -> From Binary -> From Hex -> ROT13

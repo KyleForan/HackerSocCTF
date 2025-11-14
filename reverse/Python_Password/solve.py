@@ -1,5 +1,3 @@
-import pwn
-
 FLAG = b"EHS{FAKE_FLAG}"
 KEY = b"SUPER_SECURE"
 
@@ -15,4 +13,8 @@ def xor(string, key):
 enc = xor(FLAG, KEY)
 print(enc)
 
-# enc = b'\x16\x1d\x03>\n\x10\x01\x1a\n\x06\r\x17\x16\x03\x15\x17\x01\x1e\x11\t\x06('
+# == Solution ==
+enc = b'\x16\x1d\x03>\n\x10\x01\x1a\n\x06\r\x17\x16\x03\x15\x17\x01\x1e\x11\t\x06('
+flag = xor(enc, KEY)
+
+print(flag.decode())

@@ -1,0 +1,10 @@
+The Formula to make the private key and decrypt the flag are listed in the challenge description
+
+For the private key, totient is already provided:
+d = pow(e, -1, tot) # e ^ -1 (mod) tot
+
+And to decrypt:
+m = pow(c,d,n) # c ^ d (mod) n
+
+and to turn the number into a readable flag:
+M = long_to_bytes(m)
