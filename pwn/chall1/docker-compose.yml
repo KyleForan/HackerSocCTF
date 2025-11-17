@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  chall1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chall1:latest
+    privileged: true
+    ports:
+      - "1270:5000"

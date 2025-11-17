@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+__attribute__((constructor)) void setup() {
+    setbuf(stdin, NULL);
+    setbuf(stdout, NULL);
+    setbuf(stderr, NULL);
+}
+
 int freestuff() {
     asm("pop %rdi; ret;");
     asm("pop %rsi; ret;");

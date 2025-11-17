@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  pieleak:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pieleak:latest
+    privileged: true
+    ports:
+      - "1276:5000"

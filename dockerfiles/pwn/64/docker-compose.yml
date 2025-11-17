@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ret2libc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ret2libc:latest
+    privileged: true
+    ports:
+      - "1278:5000"

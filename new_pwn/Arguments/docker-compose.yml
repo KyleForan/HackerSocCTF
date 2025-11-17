@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  args32:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: args32:latest
+    privileged: true
+    ports:
+      - "1274:5000"

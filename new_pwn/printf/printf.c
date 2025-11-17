@@ -4,6 +4,12 @@
 
 int token;
 
+__attribute__((constructor)) void setup() {
+    setbuf(stdin, NULL);
+    setbuf(stdout, NULL);
+    setbuf(stderr, NULL);
+}
+
 int vuln(void){
     char buffer[200];
     token = 0xdeadbeef;

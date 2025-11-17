@@ -2,9 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+__attribute__((constructor)) void setup() {
+    setbuf(stdin, NULL);
+    setbuf(stdout, NULL);
+    setbuf(stderr, NULL);
+}
+
 int win(void) {
     puts("Congrats!!");
-    system("cat ./flag3");
+    system("cat ./flag");
 }
 
 int vuln(void) {

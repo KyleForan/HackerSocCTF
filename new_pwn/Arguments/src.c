@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+__attribute__((constructor)) void setup() {
+    setbuf(stdin, NULL);
+    setbuf(stdout, NULL);
+    setbuf(stderr, NULL);
+}
+
 int win(int arg1, int arg2){
 	printf("Arg1: %p/0xdeadbeef, Arg2: %p/0xcafebabe\n", arg1, arg2);
     if (arg1 == 0xdeadbeef && arg2 == 0xcafebabe) {
