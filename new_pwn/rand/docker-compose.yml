@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rand:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rand:latest
+    privileged: true
+    ports:
+      - "1281:5000"
