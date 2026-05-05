@@ -10,7 +10,7 @@ do
 
         echo "Compiling $file into $outputname"
 
-        gcc $file -o $outputname -no-pie -m32 -w;
+        gcc -Wno-implicit-function-declaration $file -o $outputname -no-pie -m32 -w ;
         chmod +x $outputname
     fi
 done

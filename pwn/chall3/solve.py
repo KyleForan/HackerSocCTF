@@ -4,8 +4,8 @@ from pwn import *
 elf = ELF('./level3')
 
 # Start the local file or connect to remote
-# io = elf.process()
-io = remote('3.85.17.84', '1272')
+io = elf.process()
+# io = remote('3.85.17.84', '1272')
 
 # Exact number of bytes before the return value
 # Found using:
