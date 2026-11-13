@@ -39,5 +39,5 @@ Each category has challenges designed to walk through basic concepts of the cate
  - ghidra / binary ninja
 
 ## Acknowledgements
-Challenge Design: [Kyle Foran](https://www.linkedin.com/in/kyle-foran-935894215/) & [Anzhelika Krotovskaya](https://www.linkedin.com/in/anzhelika-krotovskaya-8a9b34336/)
-Challenge Testing: [Anzhelika Krotovskaya](https://www.linkedin.com/in/anzhelika-krotovskaya-8a9b34336/) & [Alex Hedges](https://ie.linkedin.com/in/alex-hedges-042a341b3)
+Challenge Design: [Kyle Foran](https://www.linkedin.com/in/kyle-foran-935894215/)
+Challenge Testing: [Anzhelika Krotovskaya](https://www.linkedin.com/in/anzhelika-krotovskaya-8a9b34336/)
